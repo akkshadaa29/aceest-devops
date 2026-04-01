@@ -5,12 +5,12 @@ app = Flask(__name__)
 # dummy data (in-memory)
 clients = []
 
-# ✅ Endpoint 1: GET all clients
+#  Endpoint 1: GET all clients
 @app.route('/clients', methods=['GET'])
 def get_clients():
     return jsonify(clients)
 
-# ✅ Endpoint 2: ADD client
+#  Endpoint 2: ADD client
 @app.route('/clients', methods=['POST'])
 def add_client():
     data = request.get_json()
@@ -23,4 +23,4 @@ def add_client():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
