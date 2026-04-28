@@ -3,7 +3,11 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # dummy data (in-memory)
-clients = []
+clients = [
+    {"name": "Rahul"},
+    {"name": "Priya"},
+    {"name": "Akshada"}
+]
 
 #  Endpoint 1: GET all clients
 @app.route('/clients', methods=['GET'])
